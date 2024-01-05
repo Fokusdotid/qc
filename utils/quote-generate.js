@@ -25,9 +25,9 @@ console.log('font load start from dir', fontsDir);
 readdir(fontsDir, (_err, files) => {
     files.forEach((file) => {
         try {
-            registerFont(fontsDir + files, { family: file.replace(/\.[^/.]+$/, '') });
+            registerFont(join(fontsDir, file), { family: file.replace(/\.[^/.]+$/, '') });
         } catch (e) {
-            console.error(`${fontsDir}${file} not font file`);
+            console.error(`${join(fontsDir, file)} not font file`);
         };
     });
 });

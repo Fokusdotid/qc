@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node test/index.js",
-    "lint": "eslint --fix --ext js .",
+    "lint": "eslint --ext js .",
     "lint:fix": "eslint --fix --ext js .",
     "changelog:last": "conventional-changelog -p angular -r 2",
     "changelog:preview": "conventional-changelog -p angular -u",
