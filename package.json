@@ -1,0 +1,56 @@
+{
+  "name": "@fokusid/qc",
+  "version": "1.0.0",
+  "description": "Quote Generator",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/index.js",
+    "lint": "eslint --ext js .",
+    "lint:fix": "eslint --fix --ext js .",
+    "changelog:last": "conventional-changelog -p angular -r 2",
+    "changelog:preview": "conventional-changelog -p angular -u",
+    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "keywords": [
+    "qc",
+    "quote-api",
+    "quote-generate",
+    "quote-generator"
+  ],
+  "author": "FokusDotId",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fokusdotid/quote-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fokusdotid/quote-api/issues"
+  },
+  "homepage": "https://github.com/fokusdotid/quote-api#readme",
+  "dependencies": {
+    "canvas": "^2.11.0",
+    "emoji-db": "^14.0.1",
+    "jimp": "^0.16.1",
+    "jsdom": "^23.0.1",
+    "lottie-node": "^2.0.0",
+    "lottie-web": "^5.12.2",
+    "lru-cache": "5.1.1",
+    "object-sizeof": "^2.6.3",
+    "runes": "^0.4.3",
+    "smartcrop-sharp": "^2.0.7",
+    "telegraf": "^4.15.3"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "sharp": "^0.31.3"
+  },
+  "packageManager": "yarn@1.22.19"
+}
