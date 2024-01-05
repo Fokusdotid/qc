@@ -7,6 +7,8 @@ import LRUCache from 'lru-cache';
 import lottie from 'lottie-node';
 import EmojiDbLib from 'emoji-db';
 import { Telegram } from 'telegraf';
+import { fileURLToPath } from 'url';
+import { join, dirname } from 'path';
 import smartcrop from 'smartcrop-sharp';
 import { loadImage, createCanvas, registerFont } from 'canvas';
 
@@ -14,10 +16,12 @@ import emojiImageByBrand from './emoji-image.js';
 import loadImageFromUrl from './image-load-url.js';
 
 const emojiDb = new EmojiDbLib({ useDefaultDb: true });
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // font loader
-console.log('font load start');
-const fontsDir = 'assets/fonts/';
+const fontsDir = join(__dirname, '../assets/fonts/');
+console.log('font load start from dir', fontsDir);
+
 readdir(fontsDir, (_err, files) => {
     files.forEach((file) => {
         try {
@@ -26,8 +30,6 @@ readdir(fontsDir, (_err, files) => {
             console.error(`${fontsDir}${file} not font file`);
         };
     });
-
-    console.log('font load end');
 });
 
 const avatarCache = new LRUCache({

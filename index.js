@@ -20,7 +20,7 @@ export default async function(param = {}) {
     const cacheString = createHash('md5').update(JSON.stringify(param)).digest('hex');
     const resultCache = cache.get(cacheString);
 
-    console.log({ cacheString, resultCache });
+    // console.log({ cacheString, resultCache });
 
     if (!resultCache) {
         result = await Generate(param);
