@@ -1,4 +1,4 @@
-/* eslint disable */
+/* eslint-disable */
 import FormData from 'form-data';
 import axios, { isAxiosError } from "axios";
 import QC from '../index.js';
