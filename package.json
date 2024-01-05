@@ -22,12 +22,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fokusdotid/quote-api.git"
+    "url": "git+https://github.com/fokusdotid/qc.git"
   },
   "bugs": {
-    "url": "https://github.com/fokusdotid/quote-api/issues"
+    "url": "https://github.com/fokusdotid/qc/issues"
   },
-  "homepage": "https://github.com/fokusdotid/quote-api#readme",
+  "homepage": "https://github.com/fokusdotid/qc#readme",
   "dependencies": {
     "canvas": "^2.11.0",
     "emoji-db": "^14.0.1",
