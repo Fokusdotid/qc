@@ -33,15 +33,12 @@ const data = {
     messages: [
         {
             entities: [],
-            media: {
-                url: 'https://via.placeholder.com/1000'
-            },
             avatar: true,
             from: {
                 id: 1,
-                name: 'Fokus ID',
+                name: '𝘼𝙜𝙪𝙯 𝙁𝙖𝙢𝙞𝙡𝙞𝙖',
                 photo: {
-                    url: 'https://via.placeholder.com/100'
+                    url: 'https://telegra.ph/file/98d5eab49f00767b6911b.jpg'
                 }
             },
             text: 'Hey',
