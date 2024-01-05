@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/fokusdotid/qc#readme",
   "dependencies": {
+    "axios": "^1.4.0",
     "canvas": "^2.11.0",
     "emoji-db": "^14.0.1",
     "jimp": "^0.16.1",
@@ -52,5 +53,5 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^5.0.0"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.21"
 }
