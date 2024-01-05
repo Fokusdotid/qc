@@ -3,9 +3,10 @@ import axios, { isAxiosError } from "axios";
 import QC from '../index.js';
 
 async function telegraph(buffer, options = {}) {
-	let filename = options.filename || options.fileName || options.name || options.Name || undefined;
+	const filename = options.filename || options.fileName || options.name || options.Name || '';
 	const form = new FormData();
 	form.append('file', buffer, filename || 'image.png');
+
 	try {
 		const { data } = await axios({
 			url: "https://telegra.ph/upload",
@@ -13,7 +14,7 @@ async function telegraph(buffer, options = {}) {
 			data: form,
 			headers: form.getHeaders()
 		});
-		
+
 		if (!Array.isArray(data) || !data[0].src) throw "Failed to upload this file";
 		return "https://telegra.ph" + data[0].src;
 	} catch (e) {
@@ -50,7 +51,7 @@ const data = {
 };
 
 QC(data)
-    .then(async ({ image }) => {
+    .then(async({ image }) => {
     	await telegraph(Buffer.from(image, 'base64'))
     		.then(console.log)
     		.catch(console.error);
